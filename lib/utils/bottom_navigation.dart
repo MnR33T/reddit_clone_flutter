@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reddit_clone_flutter/consts.dart';
 import 'package:reddit_clone_flutter/model/destinations.dart';
-import 'package:reddit_clone_flutter/presentation/custom_icons_icons.dart';
 import 'package:reddit_clone_flutter/screens/home_screen.dart';
 import 'package:reddit_clone_flutter/screens/post_screen.dart';
 import 'package:reddit_clone_flutter/screens/search_screen.dart';
@@ -16,6 +15,8 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   int cIndex = 0;
   String label = '•';
+
+  static bool homeArrowButtonUp = true;
 
   void _updateIndexOfBottomNav(index) {
     setState(() {
@@ -33,8 +34,7 @@ class _BottomNavState extends State<BottomNav> {
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(30), topLeft: Radius.circular(30)),
               boxShadow: [
-                BoxShadow(
-                    color: Colors.black38, spreadRadius: 0, blurRadius: 5),
+                BoxShadow(color: Colors.black38, blurRadius: 5),
               ],
             ),
             child: ClipRRect(
@@ -65,46 +65,10 @@ class _BottomNavState extends State<BottomNav> {
         icon: Icon(Icons.home_filled),
         title: 'Home',
         appBar: AppBar(
-          actions: [
-            Icon(
-              CustomIcons.search,
-              color: Colors.black,
-            )
-          ],
           elevation: 0,
           toolbarHeight: 100.0,
           backgroundColor: backgroundColor,
-          title: Padding(
-            padding: const EdgeInsets.only(left: 16.0),
-            child: Row(
-              textBaseline: TextBaseline.alphabetic,
-              crossAxisAlignment: CrossAxisAlignment.baseline,
-              children: [
-                Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.black),
-                  ),
-                  child: Icon(CustomIcons.reddit, color: Colors.black),
-                ),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Text('Home',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w600)),
-                IconButton(
-                  icon: Icon(Icons.keyboard_arrow_down_rounded,
-                      color: Colors.black),
-                  onPressed: () {},
-                )
-              ],
-            ),
-          ),
+          title: HomeAppBar(),
         )),
     Destination(
         screen: SearchScreen(),
@@ -127,4 +91,5 @@ class _BottomNavState extends State<BottomNav> {
         title: 'Account',
         appBar: null),
   ];
+
 }

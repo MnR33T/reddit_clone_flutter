@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reddit_clone_flutter/presentation/custom_icons_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const redditColor = Color(0xffFF4500);
 const inactiveColor = Color(0xffB7BCBF);
@@ -22,6 +22,6 @@ var mRedditIconButton = Material(
     height: 50,
     width: 50,
     decoration: BoxDecoration(gradient: gradientColor, shape: BoxShape.circle),
-    child: Icon(CustomIcons.reddit, color: Colors.white),
+    child: Icon(FontAwesomeIcons.redditAlien, color: Colors.white),
   ),
 );

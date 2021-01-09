@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reddit_clone_flutter/consts.dart';
-
-import 'screens/welcom_screen.dart';
+import 'package:reddit_clone_flutter/utils/bottom_navigation.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData().copyWith(primaryColor: redditColor),
-      home: WelcomScreen(),
+      home: BottomNav(),
     );
   }
 }

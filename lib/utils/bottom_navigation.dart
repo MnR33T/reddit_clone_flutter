@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reddit_clone_flutter/consts.dart';
-import 'package:reddit_clone_flutter/model/destinations.dart';
 import 'package:reddit_clone_flutter/screens/home_screen.dart';
 import 'package:reddit_clone_flutter/screens/post_screen.dart';
 import 'package:reddit_clone_flutter/screens/search_screen.dart';
@@ -15,8 +14,7 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   int cIndex = 0;
   String label = '•';
-
-  static bool homeArrowButtonUp = true;
+  List<Widget> _children;
 
   void _updateIndexOfBottomNav(index) {
     setState(() {
@@ -25,10 +23,23 @@ class _BottomNavState extends State<BottomNav> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    _children = [
+      MyHomePage(),
+      SearchScreen(),
+      PostScreen(),
+      ChatRoom(),
+      UserScreen(),
+    ];
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: allDestinations.elementAt(cIndex).appBar,
-        body: allDestinations.elementAt(cIndex).screen,
+        body: MaterialApp(
+          home: _children.elementAt(cIndex),
+        ),
         bottomNavigationBar: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -43,53 +54,34 @@ class _BottomNavState extends State<BottomNav> {
                   topRight: Radius.circular(30.0),
                 ),
                 child: BottomNavigationBar(
-                  type: BottomNavigationBarType.fixed,
-                  showUnselectedLabels: false,
-                  currentIndex: cIndex,
-                  selectedItemColor: selectedItemColor,
-                  unselectedItemColor: unSelectedItemColor,
-                  backgroundColor: Colors.white,
-                  onTap: _updateIndexOfBottomNav,
-                  items: allDestinations.map((destination) {
-                    return BottomNavigationBarItem(
-                      icon: destination.icon,
-                      label: label,
-                    );
-                  }).toList(),
-                ))));
+                    type: BottomNavigationBarType.fixed,
+                    showUnselectedLabels: false,
+                    currentIndex: cIndex,
+                    selectedItemColor: selectedItemColor,
+                    unselectedItemColor: unSelectedItemColor,
+                    backgroundColor: Colors.white,
+                    onTap: _updateIndexOfBottomNav,
+                    items: [
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.home_filled),
+                        label: label,
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.view_quilt_rounded),
+                        label: label,
+                      ),
+                      BottomNavigationBarItem(
+                        icon: mRedditIconButton,
+                        label: '',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.sms_rounded),
+                        label: label,
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.person_rounded),
+                        label: label,
+                      ),
+                    ]))));
   }
-
-  List<Destination> allDestinations = <Destination>[
-    Destination(
-        screen: MyHomePage(),
-        icon: Icon(Icons.home_filled),
-        title: 'Home',
-        appBar: AppBar(
-          elevation: 0,
-          toolbarHeight: 100.0,
-          backgroundColor: backgroundColor,
-          title: HomeAppBar(),
-        )),
-    Destination(
-        screen: SearchScreen(),
-        icon: Icon(Icons.view_quilt_rounded),
-        title: 'search',
-        appBar: null),
-    Destination(
-        screen: PostScreen(),
-        icon: mRedditIconButton,
-        title: 'Post',
-        appBar: null),
-    Destination(
-        screen: ChatRoom(),
-        icon: Icon(Icons.sms_rounded),
-        title: 'ChatRoom',
-        appBar: null),
-    Destination(
-        screen: UserScreen(),
-        icon: Icon(Icons.person_rounded),
-        title: 'Account',
-        appBar: null),
-  ];
-
 }

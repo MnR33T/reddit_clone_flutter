@@ -18,6 +18,333 @@ class _MyHomePageState extends State<MyHomePage> {
     Text('Top'),
   ];
 
+  final List<Widget> content = [
+    Container(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+          boxShadow: [BoxShadow(color: Colors.black38, blurRadius: 2)],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20.0,
+                    child: Icon(FontAwesomeIcons.facebook),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'r/playStation5',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.0,
+                            color: Colors.black),
+                      ),
+                      Text(
+                        'u/gamesdas • 4h',
+                        style: TextStyle(fontSize: 15.0, color: Colors.black38),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.more_horiz_rounded),
+              ),
+            ],
+          ),
+          Text(
+            'This is Discription',
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          Container(
+            height: 200.0,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                image: DecorationImage(
+                    image: AssetImage('images/reddit_welcom_img.jpg'),
+                    fit: BoxFit.fill)),
+            margin: EdgeInsets.only(top: 10.0, bottom: 16.0),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(FontAwesomeIcons.commentAlt),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.share_outlined),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.card_giftcard_outlined),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffEDEDED),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_drop_up,
+                      ),
+                      onPressed: null,
+                    ),
+                    Text('357',
+                        style: TextStyle(
+                            fontSize: 10.0,
+                            color: Colors.black38,
+                            fontWeight: FontWeight.bold)),
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_drop_down,
+                      ),
+                      onPressed: null,
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    ),
+    Container(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+          boxShadow: [BoxShadow(color: Colors.black38, blurRadius: 2)],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20.0,
+                    child: Icon(FontAwesomeIcons.facebook),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'r/playStation5',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.0,
+                            color: Colors.black),
+                      ),
+                      Text(
+                        'u/gamesdas • 4h',
+                        style: TextStyle(fontSize: 15.0, color: Colors.black38),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.more_horiz_rounded),
+              ),
+            ],
+          ),
+          Text(
+            'This is Discription',
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          Container(
+            height: 200.0,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                image: DecorationImage(
+                    image: AssetImage('images/reddit_welcom_img.jpg'),
+                    fit: BoxFit.fill)),
+            margin: EdgeInsets.only(top: 10.0, bottom: 16.0),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(FontAwesomeIcons.commentAlt),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.share_outlined),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.card_giftcard_outlined),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffEDEDED),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_drop_up,
+                      ),
+                      onPressed: null,
+                    ),
+                    Text('357',
+                        style: TextStyle(
+                            fontSize: 10.0,
+                            color: Colors.black38,
+                            fontWeight: FontWeight.bold)),
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_drop_down,
+                      ),
+                      onPressed: null,
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    ),
+    Container(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+          boxShadow: [BoxShadow(color: Colors.black38, blurRadius: 2)],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20.0,
+                    child: Icon(FontAwesomeIcons.facebook),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'r/playStation5',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.0,
+                            color: Colors.black),
+                      ),
+                      Text(
+                        'u/gamesdas • 4h',
+                        style: TextStyle(fontSize: 15.0, color: Colors.black38),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.more_horiz_rounded),
+              ),
+            ],
+          ),
+          Text(
+            'This is Discription',
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          Container(
+            height: 200.0,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                image: DecorationImage(
+                    image: AssetImage('images/reddit_welcom_img.jpg'),
+                    fit: BoxFit.fill)),
+            margin: EdgeInsets.only(top: 10.0, bottom: 16.0),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(FontAwesomeIcons.commentAlt),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.share_outlined),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.card_giftcard_outlined),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffEDEDED),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_drop_up,
+                      ),
+                      onPressed: null,
+                    ),
+                    Text('357',
+                        style: TextStyle(
+                            fontSize: 10.0,
+                            color: Colors.black38,
+                            fontWeight: FontWeight.bold)),
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_drop_down,
+                      ),
+                      onPressed: null,
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,356 +407,12 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             homeArrowButtonDown ? showOptions() : Container(),
-            Container(
-              color: backgroundColor,
-              child: Column(
-                children: [
-                  Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
-                    padding: EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(color: Colors.black38, blurRadius: 5)
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  radius: 20.0,
-                                  child: Icon(FontAwesomeIcons.facebook),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'r/playStation5',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20.0,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      'u/gamesdas • 4h',
-                                      style: TextStyle(
-                                          fontSize: 15.0,
-                                          color: Colors.black38),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.more_horiz_rounded),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          'This is Discription',
-                          style: TextStyle(
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Container(
-                          height: 200.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'images/reddit_welcom_img.jpg'),
-                                  fit: BoxFit.fill)),
-                          margin: EdgeInsets.only(top: 10.0, bottom: 16.0),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(FontAwesomeIcons.commentAlt),
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.share_outlined),
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.card_giftcard_outlined),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Color(0xffEDEDED),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10.0))),
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.arrow_drop_up,
-                                    ),
-                                    onPressed: null,
-                                  ),
-                                  Text('357',
-                                      style: TextStyle(
-                                          fontSize: 10.0,
-                                          color: Colors.black38,
-                                          fontWeight: FontWeight.bold)),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.arrow_drop_down,
-                                    ),
-                                    onPressed: null,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
-                    padding: EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(color: Colors.black38, blurRadius: 5)
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  radius: 20.0,
-                                  child: Icon(FontAwesomeIcons.facebook),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'r/playStation5',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20.0,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      'u/gamesdas • 4h',
-                                      style: TextStyle(
-                                          fontSize: 15.0,
-                                          color: Colors.black38),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.more_horiz_rounded),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          'This is Discription',
-                          style: TextStyle(
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Container(
-                          height: 200.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'images/reddit_welcom_img.jpg'),
-                                  fit: BoxFit.fill)),
-                          margin: EdgeInsets.only(top: 10.0, bottom: 16.0),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(FontAwesomeIcons.commentAlt),
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.share_outlined),
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.card_giftcard_outlined),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Color(0xffEDEDED),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10.0))),
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.arrow_drop_up,
-                                    ),
-                                    onPressed: null,
-                                  ),
-                                  Text('357',
-                                      style: TextStyle(
-                                          fontSize: 10.0,
-                                          color: Colors.black38,
-                                          fontWeight: FontWeight.bold)),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.arrow_drop_down,
-                                    ),
-                                    onPressed: null,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
-                    padding: EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(color: Colors.black38, blurRadius: 5)
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  radius: 20.0,
-                                  child: Icon(FontAwesomeIcons.facebook),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'r/playStation5',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20.0,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      'u/gamesdas • 4h',
-                                      style: TextStyle(
-                                          fontSize: 15.0,
-                                          color: Colors.black38),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.more_horiz_rounded),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          'This is Discription',
-                          style: TextStyle(
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Container(
-                          height: 200.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'images/reddit_welcom_img.jpg'),
-                                  fit: BoxFit.fill)),
-                          margin: EdgeInsets.only(top: 10.0, bottom: 16.0),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(FontAwesomeIcons.commentAlt),
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.share_outlined),
-                            ),
-                            IconButton(
-                              onPressed: null,
-                              icon: Icon(Icons.card_giftcard_outlined),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Color(0xffEDEDED),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10.0))),
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.arrow_drop_up,
-                                    ),
-                                    onPressed: null,
-                                  ),
-                                  Text('357',
-                                      style: TextStyle(
-                                          fontSize: 10.0,
-                                          color: Colors.black38,
-                                          fontWeight: FontWeight.bold)),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.arrow_drop_down,
-                                    ),
-                                    onPressed: null,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
+            Expanded(
+              child: ListView.builder(
+                itemCount: content.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return content.elementAt(index);
+                },
               ),
             ),
           ],

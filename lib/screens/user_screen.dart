@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UserScreen extends StatelessWidget {
@@ -58,6 +60,8 @@ class UserScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
+              padding: EdgeInsets.only(
+                  left: 16.0, top: 40.0, bottom: 16.0, right: 16.0),
               height: 470.0,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -71,13 +75,83 @@ class UserScreen extends StatelessWidget {
                   Text(
                     'u/Jacob Jones',
                     style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
-                  RichText(
-                    text: null,
-                  )
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Stack(
+                    children: [
+                      Positioned(
+                        left: 30,
+                        top: 0,
+                        child: Icon(
+                          FontAwesomeIcons.quoteLeft,
+                          size: 8.0,
+                          color: Colors.black38,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                        child: Text(
+                            'This is my Bio. I wonder how will it wrap the text',
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.caption),
+                      ),
+                      Positioned(
+                        right: 30,
+                        bottom: 0,
+                        child: Icon(
+                          FontAwesomeIcons.quoteRight,
+                          size: 8.0,
+                          color: Colors.black38,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Expanded(
+                    child: ListView(children: [
+                      ListTile(
+                        tileColor: Color(0xffFAFAFA),
+                        leading: Icon(FontAwesomeIcons.coins),
+                        title: Text('Reddit Coins'),
+                        trailing: Icon(Icons.chevron_right),
+                      ),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      ListTile(
+                        tileColor: Color(0xffFAFAFA),
+                        leading: Icon(Icons.pending),
+                        title: Text('Pending Posts'),
+                        trailing: Icon(Icons.chevron_right),
+                      ),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      ListTile(
+                        tileColor: Color(0xffFAFAFA),
+                        leading: Icon(Icons.my_library_books_rounded),
+                        title: Text('Draft'),
+                        trailing: Icon(Icons.chevron_right),
+                      ),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      ListTile(
+                        tileColor: Color(0xffFAFAFA),
+                        leading: Icon(FontAwesomeIcons.history),
+                        title: Text('History'),
+                        trailing: Icon(Icons.chevron_right),
+                      )
+                    ]),
+                  ),
                 ],
               ),
             ),
